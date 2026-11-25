@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Khmer AI Video Translator Pro</title>
+<style>
+body{background:#101522;color:white;font-family:Arial;padding:20px}
+main{max-width:600px;margin:auto}
+h1{color:#55d6aa;text-align:center}
+.card{background:#202c40;padding:18px;border-radius:15px;margin:15px 0}
+input,select,button{width:100%;padding:14px;margin:10px 0;border-radius:9px}
+button{background:#16a982;color:white;border:0;font-weight:bold}
+p{line-height:1.7}
+</style>
+</head>
+<body>
+<main>
+<h1>🎬 Khmer AI Video Translator Pro</h1>
+<p style="text-align:center">Your Story. Your Khmer Voice.</p>
+
+<div class="card">
+<h3>📁 បញ្ចូលវីដេអូ</h3>
+<input type="file" id="video" accept="video/*" multiple>
+<p id="count">មិនទាន់មានវីដេអូ</p>
+</div>
+
+<div class="card">
+<h3>🌍 ភាសាដើម</h3>
+<select>
+<option>Auto Detect</option>
+<option>English</option>
+<option>Thai</option>
+<option>Chinese</option>
+<option>Japanese</option>
+<option>Korean</option>
+</select>
+<h3>🇰🇭 ភាសាចេញ</h3>
+<select><option>Khmer</option></select>
+</div>
+
+<div class="card">
+<h3>🎙️ សំឡេងតួអង្គ</h3>
+<select>
+<option>ក្លូនលក្ខណៈសំឡេងតួអង្គ</option>
+<option>សំឡេងប្រុសខ្មែរ</option>
+<option>សំឡេងស្រីខ្មែរ</option>
+</select>
+<p>អាចភ្ជាប់ប្រព័ន្ធ AI Voice Cloning នៅដំណាក់កាលបន្ទាប់។</p>
+</div>
+
+<div class="card">
+<h3>⚙️ ដំណើរការវីដេអូ</h3>
+<button onclick="translateVideo()">🚀 ចាប់ផ្ដើមបកប្រែ</button>
+<p id="status">រង់ចាំវីដេអូ...</p>
+</div>
+</main>
+
+<script>
+const v=document.getElementById('video');
+v.onchange=()=>{
+document.getElementById('count').innerText=
+'បានជ្រើសរើស '+v.files.length+' វីដេអូ';
+};
+function translateVideo(){
+document.getElementById('status').innerText=
+v.files.length
+?'បានទទួលវីដេអូហើយ។ ត្រូវការភ្ជាប់ AI Server ដើម្បីបកប្រែ។'
+:'សូមជ្រើសរើសវីដេអូជាមុនសិន។';
+}
+</script>
+</body>
+</html>
